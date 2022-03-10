@@ -1,32 +1,11 @@
-import Card from "./Cards/Card";
 import "./App.css";
-import Input from "./InputForm/InputDetail";
-import { useState } from "react";
+import classes from "./App.module.css";
+import Todo from "./todo/Todo";
 
 const App = () => {
-  const [recievedData, setRecievedData] = useState([]);
-  const dataRecieverHandler = (todoItem) => {
-    setRecievedData((todolist) => {
-      return [
-        ...todolist,
-        { id: Math.random().toString(), listItem: todoItem },
-      ];
-    });
-    console.log(recievedData);
-  };
-  /*
-  (todolist) => {
-      return [
-        ...todolist,
-        { id: Math.random().toString(), listItem: todoItem },
-      ];
-    }
-  */
-
   return (
-    <div>
-      <Input passProps={dataRecieverHandler}></Input>
-      <Card value={recievedData}></Card>
+    <div className={classes.main}>
+      <Todo />
     </div>
   );
 };

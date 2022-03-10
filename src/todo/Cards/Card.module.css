@@ -1,0 +1,14 @@
+.card {
+  text-align: left;
+  font-weight: 600;
+  color: rgb(0, 0, 0);
+  background: rgb(153, 53, 167);
+  box-shadow: 0 2px 8px regba(0, 0, 0, 0.26);
+  border-radius: 10px;
+  width: auto;
+  padding: 10px;
+  margin: 20px;
+}
+.button {
+  margin-left: 20px;
+}
