@@ -7,10 +7,7 @@ const Todo = () => {
   const [recievedData, setRecievedData] = useState([]);
   const dataRecieverHandler = (todoItem) => {
     setRecievedData((todolist) => {
-      return [
-        ...todolist,
-        { id: Math.random().toString(), listItem: todoItem },
-      ];
+      return [...todolist, { id: Math.random(), listItem: todoItem }];
     });
     console.log(recievedData);
   };
