@@ -2,17 +2,16 @@ import { useState, useEffect } from "react";
 import classes from "./Card.module.css";
 
 const Card = (props) => {
-  const recievedPropsList = props.value;
-
-  const [newList, setNewValue] = useState([]);
+  const recievedData = props.value;
+  const [itemsList, setItemsList] = useState([]);
 
   useEffect(() => {
-    setNewValue(recievedPropsList);
-  }, []);
+    setItemsList(recievedData);
+  }, [recievedData]);
 
   const deleteHandler = (id) => {
-    const list = props.value.filter((entry) => entry.id !== id);
-    setNewValue(list);
+    const list = itemsList.filter((entry) => entry.id !== id);
+    setItemsList(list);
   };
 
   const editHandler = () => {};
@@ -20,7 +19,7 @@ const Card = (props) => {
   return (
     <div className={classes.card}>
       <ul>
-        {newList.map((entry) => (
+        {itemsList.map((entry) => (
           <li key={entry.id}>
             {entry.listItem}
             <button className={classes.button} onClick={editHandler}>
