@@ -9,11 +9,18 @@ const Card = (props) => {
     setItemsList(recievedData);
   }, [recievedData]);
 
+  /*
   const deleteHandler = (id) => {
     const list = itemsList.filter((entry) => entry.id !== id);
     setItemsList(list);
   };
+*/
+  const deleteHandler = (id) => {
+    props.deleteProps(id);
+    setItemsList(props.value);
+  };
 
+  /*
   const editHandler = (id) => {
     const newList = itemsList.map((item) => {
       if (item.id === id) {
@@ -29,17 +36,17 @@ const Card = (props) => {
 
     setItemsList(newList);
   };
+*/
+  const editHandler = (id) => {
+    props.editProps(id);
+    setItemsList(props.value);
+  };
 
   return (
     <div className={classes.card}>
       <ul>
         {itemsList.map((entry) => (
-          <li
-            style={{
-              textDecoration: "Bold",
-            }}
-            key={entry.id}
-          >
+          <li key={entry.id}>
             {entry.listItem}
             <button
               className={classes.button}
