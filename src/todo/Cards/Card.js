@@ -14,15 +14,37 @@ const Card = (props) => {
     setItemsList(list);
   };
 
-  const editHandler = () => {};
+  const editHandler = (id) => {
+    const newList = itemsList.map((item) => {
+      if (item.id === id) {
+        const updatedItem = {
+          ...item,
+          listItem: "edited",
+        };
+        return updatedItem;
+      }
+
+      return item;
+    });
+
+    setItemsList(newList);
+  };
 
   return (
     <div className={classes.card}>
       <ul>
         {itemsList.map((entry) => (
-          <li key={entry.id}>
+          <li
+            style={{
+              textDecoration: "Bold",
+            }}
+            key={entry.id}
+          >
             {entry.listItem}
-            <button className={classes.button} onClick={editHandler}>
+            <button
+              className={classes.button}
+              onClick={() => editHandler(entry.id)}
+            >
               Edit
             </button>
             <button
