@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react";
 import classes from "./Card.module.css";
-
+import EditForm from "../EditForm/EditForm";
 const Card = (props) => {
   const recievedData = props.value;
   const [itemsList, setItemsList] = useState([]);
+  const [boolEditState, setBoolEditState] = useState(false);
 
   useEffect(() => {
     setItemsList(recievedData);
@@ -50,10 +51,13 @@ const Card = (props) => {
             {entry.listItem}
             <button
               className={classes.button}
-              onClick={() => editHandler(entry.id)}
+              onClick={() => {
+                setBoolEditState(true);
+              }}
             >
               Edit
             </button>
+            {boolEditState && <EditForm />}
             <button
               className={classes.button}
               onClick={() => deleteHandler(entry.id)}
