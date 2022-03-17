@@ -57,13 +57,18 @@ const Card = (props) => {
             >
               Edit
             </button>
-            {boolEditState && <EditForm />}
+
             <button
               className={classes.button}
               onClick={() => deleteHandler(entry.id)}
             >
               Delete
             </button>
+            {boolEditState && (
+              <div>
+                <EditForm />
+              </div>
+            )}
           </li>
         ))}
       </ul>
