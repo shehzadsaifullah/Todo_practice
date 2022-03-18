@@ -10,36 +10,14 @@ const Card = (props) => {
     setItemsList(recievedData);
   }, [recievedData]);
 
-  /*
-  const deleteHandler = (id) => {
-    const list = itemsList.filter((entry) => entry.id !== id);
-    setItemsList(list);
-  };
-*/
   const deleteHandler = (id) => {
     props.deleteProps(id);
     setItemsList(props.value);
   };
 
-  /*
-  const editHandler = (id) => {
-    const newList = itemsList.map((item) => {
-      if (item.id === id) {
-        const updatedItem = {
-          ...item,
-          listItem: "edited",
-        };
-        return updatedItem;
-      }
-
-      return item;
-    });
-
-    setItemsList(newList);
-  };
-*/
-  const editHandler = (id) => {
-    props.editProps(id);
+  const editHandler = (id, dataFromForm) => {
+    console.log("valin func", dataFromForm);
+    props.editProps(id, dataFromForm);
     /*i need to pass the new date from
      the editform here and then pass it
       to the parent componenet*/
@@ -70,10 +48,7 @@ const Card = (props) => {
             </button>
             {boolEditState && (
               <div>
-                <EditForm
-                  list={recievedData}
-                  passNewList={() => editHandler(entry.id)}
-                />
+                <EditForm passNewList={(val) => editHandler(entry.id, val)} />
               </div>
             )}
           </li>

@@ -1,10 +1,14 @@
 import Card from "./Cards/Card";
 import Input from "./InputForm/InputDetail";
-import { useEffect, useState, useContext } from "react";
+import { useEffect, useState } from "react";
 import classes from "../App.module.css";
 
 const Todo = () => {
   const [recievedData, setRecievedData] = useState([]);
+
+  useEffect(() => {
+    console.log(recievedData);
+  }, [recievedData]);
 
   const dataRecieverHandler = (todoItem) => {
     setRecievedData((todolist) => {
@@ -18,12 +22,12 @@ const Todo = () => {
     setRecievedData(list);
   };
 
-  const editActual = (newEntryData, rcvdID) => {
+  const editActual = (rcvdID, newEntryData) => {
     const newList = recievedData.map((entry) => {
       if (entry.id === rcvdID) {
         const updatedItem = {
           ...entry,
-          listItem: newEntry,
+          listItem: newEntryData,
           /*im trying to get the new entry from editform
           through card and recieve it here to be updated 
           in original state of original list
@@ -38,10 +42,6 @@ const Todo = () => {
   };
 
   /////////////////////////////////////////////////////////////
-
-  useEffect(() => {
-    console.log(recievedData);
-  }, [recievedData]);
 
   return (
     <div className={classes.main}>
