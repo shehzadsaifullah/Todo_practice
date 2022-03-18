@@ -7,12 +7,18 @@ const EditForm = (props) => {
     setNewData(event.target.value);
   };
 
+  const submitNewData = () => {
+    props.passNewList(newData, "");
+  };
+
   return (
     <div>
       <form>
         <label>Edit your item</label>
         <input type="text" onChange={newInputInfo}></input>
-        <button type="submit">submit changes</button>
+        <button type="submit" onSubmit={submitNewData}>
+          submit changes
+        </button>
       </form>
     </div>
   );

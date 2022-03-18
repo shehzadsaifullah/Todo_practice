@@ -18,12 +18,16 @@ const Todo = () => {
     setRecievedData(list);
   };
 
-  const editActual = (rcvdID) => {
+  const editActual = (newEntryData, rcvdID) => {
     const newList = recievedData.map((entry) => {
       if (entry.id === rcvdID) {
         const updatedItem = {
           ...entry,
-          listItem: "edited",
+          listItem: newEntry,
+          /*im trying to get the new entry from editform
+          through card and recieve it here to be updated 
+          in original state of original list
+          */
         };
         return updatedItem;
       }
