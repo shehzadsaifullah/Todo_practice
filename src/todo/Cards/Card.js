@@ -19,7 +19,7 @@ const Card = (props) => {
     console.log("valin func", dataFromForm);
     props.editProps(id, dataFromForm);
     /*i need to pass the new date from
-     the editform here and then pass it
+
       to the parent componenet*/
     setItemsList(props.value);
     setBoolEditState(false);
