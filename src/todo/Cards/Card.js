@@ -41,6 +41,7 @@ const Card = (props) => {
   const editHandler = (id) => {
     props.editProps(id);
     setItemsList(props.value);
+    setBoolEditState(false);
   };
 
   return (
@@ -66,7 +67,10 @@ const Card = (props) => {
             </button>
             {boolEditState && (
               <div>
-                <EditForm />
+                <EditForm
+                  list={recievedData}
+                  passNewList={() => editHandler(entry.id)}
+                />
               </div>
             )}
           </li>

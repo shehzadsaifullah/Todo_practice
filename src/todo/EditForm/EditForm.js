@@ -1,10 +1,10 @@
 import { useState } from "react";
 
-const editForm = () => {
-  //const [newData, setNewData] = useState();
+const EditForm = (props) => {
+  const [newData, setNewData] = useState();
 
   const newInputInfo = (event) => {
-    console.log("HelloEDIT");
+    setNewData(event.target.value);
   };
 
   return (
@@ -17,4 +17,4 @@ const editForm = () => {
     </div>
   );
 };
-export default editForm;
+export default EditForm;
