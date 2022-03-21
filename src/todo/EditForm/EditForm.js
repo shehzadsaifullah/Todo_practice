@@ -8,7 +8,8 @@ const EditForm = (props) => {
   };
 
   const submitNewData = () => {
-    props.passNewList(newData);
+    const abc = 10;
+    props.passNewList(newData, abc);
   };
 
   return (
