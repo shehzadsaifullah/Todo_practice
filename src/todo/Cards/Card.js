@@ -17,11 +17,8 @@ const Card = (props) => {
 
   const editHandler = (id, dataFromForm, vaaa) => {
     console.log("valin func", dataFromForm);
-    console.log("newer value", vaaa);
-    props.editProps(id, dataFromForm);
-    /*i need to pass the new date from
 
-      to the parent componenet*/
+    props.editProps(id, dataFromForm);
     setItemsList(props.value);
     setBoolEditState(false);
   };
@@ -49,9 +46,7 @@ const Card = (props) => {
             </button>
             {boolEditState && (
               <div>
-                <EditForm
-                  passNewList={(val, val2) => editHandler(entry.id, val, val2)}
-                />
+                <EditForm passNewList={(val) => editHandler(entry.id, val)} />
               </div>
             )}
           </li>
