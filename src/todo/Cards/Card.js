@@ -17,7 +17,7 @@ const Card = (props) => {
 
   const editHandler = (id, dataFromForm, vaaa) => {
     console.log("valin func", dataFromForm);
-    //console.log("newer value", vaaa);
+    console.log("newer value", vaaa);
     props.editProps(id, dataFromForm);
     /*i need to pass the new date from
 
