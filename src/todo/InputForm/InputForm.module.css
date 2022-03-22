@@ -1,0 +1,18 @@
+.text {
+  color: white;
+}
+.button {
+  background-color: #9d7ada;
+  border: none;
+  color: white;
+  padding: 8px;
+  text-align: center;
+  text-decoration: double;
+
+  font-size: 15px;
+  margin-left: 20px;
+  border-radius: 7px;
+}
+.input {
+  border-radius: 5px;
+}

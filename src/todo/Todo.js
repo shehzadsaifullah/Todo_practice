@@ -45,6 +45,7 @@ const Todo = () => {
 
   return (
     <div className={classes.main}>
+      <h1>ToDo List </h1>
       <Input passProps={dataRecieverHandler}></Input>
       <Card
         value={recievedData}

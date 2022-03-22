@@ -1,14 +1,27 @@
 .card {
   text-align: left;
-  font-weight: 600;
+  font-weight: 550;
   color: rgb(0, 0, 0);
-  background: rgb(153, 53, 167);
+  background: #4d2b90;
   box-shadow: 0 2px 8px regba(0, 0, 0, 0.26);
   border-radius: 10px;
   width: auto;
   padding: 10px;
   margin: 20px;
+  font-family: sans-serif;
 }
 .button {
+  background-color: #7e57c2;
+  border: none;
+  color: white;
+  padding: 8px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
   margin-left: 20px;
+  border-radius: 7px;
+}
+.input {
+  border-radius: 5px;
 }

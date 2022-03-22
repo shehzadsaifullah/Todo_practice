@@ -1,4 +1,5 @@
 import { useState } from "react";
+import classes from "../Cards/Card.module.css";
 
 const EditForm = (props) => {
   const [newData, setNewData] = useState();
@@ -16,11 +17,14 @@ const EditForm = (props) => {
     <div>
       <label>Edit your item</label>
       <input
+        className={classes.input}
         type="text"
         onChange={newInputInfo}
         defaultValue={props.object}
       ></input>
-      <button onClick={submitNewData}>Submit Changes</button>
+      <button className={classes.button} onClick={submitNewData}>
+        Submit Changes
+      </button>
     </div>
   );
 };

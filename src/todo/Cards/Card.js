@@ -21,16 +21,14 @@ const Card = (props) => {
   };
 
   return (
-    <div className={classes.card}>
-      <ul>
-        {itemsList.map((entry) => (
-          <BasicCard
-            object={entry}
-            editHandler={editHandler}
-            deleteHandler={deleteHandler}
-          />
-        ))}
-      </ul>
+    <div>
+      {itemsList.map((entry) => (
+        <BasicCard
+          object={entry}
+          editHandler={editHandler}
+          deleteHandler={deleteHandler}
+        />
+      ))}
     </div>
   );
 };

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import classes from "./InputForm.module.css";
 
 const Input = (props) => {
   const [listEntery, setListEntery] = useState("");
@@ -12,10 +13,17 @@ const Input = (props) => {
     setListEntery("");
   };
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className={classes.text}>
       <label>New Task : </label>
-      <input type="text" value={listEntery} onChange={inputHandler}></input>
-      <button type="submit">addList</button>
+      <input
+        className={classes.input}
+        type="text"
+        value={listEntery}
+        onChange={inputHandler}
+      ></input>
+      <button className={classes.button} type="submit">
+        addList
+      </button>
     </form>
   );
 };

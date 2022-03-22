@@ -18,7 +18,7 @@ const BasicCard = (props) => {
   };
 
   return (
-    <div>
+    <div className={classes.card}>
       <li key={props.object.id}>
         {props.object.listItem}
         <button
