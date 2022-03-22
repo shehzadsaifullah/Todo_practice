@@ -15,7 +15,11 @@ const EditForm = (props) => {
   return (
     <div>
       <label>Edit your item</label>
-      <input type="text" onChange={newInputInfo}></input>
+      <input
+        type="text"
+        onChange={newInputInfo}
+        defaultValue={props.object}
+      ></input>
       <button onClick={submitNewData}>Submit Changes</button>
     </div>
   );
