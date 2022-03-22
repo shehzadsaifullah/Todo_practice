@@ -15,7 +15,7 @@
 //     setItemsList(props.value);
 //   };
 
-//   const editHandler = (id, dataFromForm, vaaa) => {
+//   const editHandler = (id, dataFromForm) => {
 //     console.log("valin func", dataFromForm);
 
 //     props.editProps(id, dataFromForm);

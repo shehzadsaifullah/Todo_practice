@@ -1,4 +1,4 @@
-import Card from "./Cards/Card";
+import BaseCard from "./Cards/BaseCard";
 import Input from "./InputForm/InputDetail";
 import { useEffect, useState } from "react";
 import classes from "../App.module.css";
@@ -46,11 +46,11 @@ const Todo = () => {
   return (
     <div className={classes.main}>
       <Input passProps={dataRecieverHandler}></Input>
-      <Card
+      <BaseCard
         value={recievedData}
         deleteProps={deleteActual}
         editProps={editActual}
-      ></Card>
+      ></BaseCard>
     </div>
   );
 };
