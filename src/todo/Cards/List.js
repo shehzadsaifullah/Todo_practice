@@ -1,8 +1,7 @@
 import { useState, useEffect } from "react";
-import classes from "./Card.module.css";
 import BasicCard from "./BasicCard";
 
-const Card = (props) => {
+const List = (props) => {
   const recievedData = props.value;
   const [itemsList, setItemsList] = useState([]);
 
@@ -32,4 +31,4 @@ const Card = (props) => {
     </div>
   );
 };
-export default Card;
+export default List;

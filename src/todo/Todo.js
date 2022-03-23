@@ -1,4 +1,4 @@
-import Card from "./Cards/Card";
+import List from "./Cards/List";
 import Input from "./InputForm/InputDetail";
 import { useEffect, useState } from "react";
 import classes from "../App.module.css";
@@ -47,11 +47,11 @@ const Todo = () => {
     <div className={classes.main}>
       <h1>ToDo List </h1>
       <Input passProps={dataRecieverHandler}></Input>
-      <Card
+      <List
         value={recievedData}
         deleteProps={deleteActual}
         editProps={editActual}
-      ></Card>
+      ></List>
     </div>
   );
 };
