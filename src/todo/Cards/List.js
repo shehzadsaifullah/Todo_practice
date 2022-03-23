@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import BasicCard from "./BasicCard";
+import Card from "./Card";
 
 const List = (props) => {
   const recievedData = props.value;
@@ -22,7 +22,7 @@ const List = (props) => {
   return (
     <div>
       {itemsList.map((entry) => (
-        <BasicCard
+        <Card
           object={entry}
           editHandler={editHandler}
           deleteHandler={deleteHandler}

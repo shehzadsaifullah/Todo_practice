@@ -26,7 +26,6 @@ const EditForm = (props) => {
         className={classes.input}
         type="text"
         defaultValue={props.object}
-        // onInput={newInputInfo}
         ref={itemDefaultValue}
       ></input>
       <button className={classes.button} onClick={submitNewData}>
