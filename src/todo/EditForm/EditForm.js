@@ -19,7 +19,7 @@ const EditForm = (props) => {
       <input
         className={classes.input}
         type="text"
-        onChange={newInputInfo}
+        onBlur={newInputInfo}
         defaultValue={props.object}
       ></input>
       <button className={classes.button} onClick={submitNewData}>
