@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useRef } from "react";
 import classes from "../Cards/Card.module.css";
 
 const EditForm = (props) => {
