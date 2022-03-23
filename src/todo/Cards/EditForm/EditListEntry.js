@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import classes from "../Cards/Card.module.css";
+import classes from "../Card.module.css";
 
 const EditForm = (props) => {
   //using ref instead of states to store value on every event of the

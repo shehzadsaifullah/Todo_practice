@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import classes from "./Card.module.css";
-import EditForm from "../EditForm/EditForm";
+import EditForm from "./EditForm/EditListEntry";
 const BasicCard = (props) => {
   const [boolEditState, setBoolEditState] = useState(false);
 
