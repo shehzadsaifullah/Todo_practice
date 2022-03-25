@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import classes from "./Card.module.css";
 import EditForm from "./EditForm/EditListEntry";
 const BasicCard = (props) => {
